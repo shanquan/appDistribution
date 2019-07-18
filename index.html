@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+  </head>
+  <body onload="isMobile()">
+   	<h3>请点击右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载!<p></p></h3>
+    <script type="text/javascript">
+      var tipsNode = document.getElementsByTagName('h3')[0];
+      // infoNode用于调试
+      // var infoNode = document.getElementsByTagName('p')[0];
+      // infoNode.innerHTML=navigator.userAgent;
+    function isMobile() {
+        // tipsNode.removeChild(infoNode);
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if(!isMobile){
+          tipsNode.innerHTML="请使用手机系统浏览器打开!";
+        }else if(/micromessenger/i.test(navigator.userAgent.toLowerCase())){
+          tipsNode.innerHTML="请点击微信右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载!";
+        }else if(/android/i.test(navigator.userAgent.toLowerCase())){
+          tipsNode.innerHTML="";
+          var url = "/app/binary/mes.apk";
+          window.location = url;
+        }else if(/safari/i.test(navigator.userAgent.toLowerCase())){
+          tipsNode.innerHTML="";
+          // itms-services 浏览器直接安装
+          // var url = "itms-services://?action=dpwnload-manifest&url=pathto/manifest.plist"
+          // 跳转至itunes安装,中文：l=zh
+          // var url = "https://itunes.apple.com/cn/app/byd-shi-jia-guan-li/id979829800?l=en&mt=8"
+          // 考勤IOSAPP下载安装: https://shanquane.club/app/manifest.plist
+          var url = "itms-services://?action=download-manifest&url=https://moa.byd.com.cn:9006/moaapp/services/common/app/download/iOS/com_byd_moaais/4_1_1_1/4_1_1_1.plist"
+          window.location = url;
+        }
+    }
+  </script>
+  </body>
+</html>
+
