@@ -21,7 +21,7 @@
           tipsNode.innerHTML="请点击微信右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载!";
         }else if(/android/i.test(navigator.userAgent.toLowerCase())){
           tipsNode.innerHTML="";
-          var url = "/app/binary/mes.apk";
+          var url = "https://devdata-1252923336.cos.ap-guangzhou.myqcloud.com/share/demo.apk";
           window.location = url;
         }else if(/safari/i.test(navigator.userAgent.toLowerCase())){
           tipsNode.innerHTML="";
