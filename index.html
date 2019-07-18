@@ -27,10 +27,12 @@
           tipsNode.innerHTML="";
           // itms-services 浏览器直接安装
           // var url = "itms-services://?action=dpwnload-manifest&url=pathto/manifest.plist"
+          var url =
+          "itms-services://?action=download-manifest&url=https://devdata-1252923336.cos.ap-guangzhou.myqcloud.com/share/manifest.plist"
           // 跳转至itunes安装,中文：l=zh
           // var url = "https://itunes.apple.com/cn/app/byd-shi-jia-guan-li/id979829800?l=en&mt=8"
-          // 考勤IOSAPP下载安装: https://shanquane.club/app/manifest.plist
-          var url = "itms-services://?action=download-manifest&url=https://moa.byd.com.cn:9006/moaapp/services/common/app/download/iOS/com_byd_moaais/4_1_1_1/4_1_1_1.plist"
+          // 考勤IOSAPP下载安装
+          // var url = "itms-services://?action=download-manifest&url=https://moa.byd.com.cn:9006/moaapp/services/common/app/download/iOS/com_byd_moaais/4_1_1_1/4_1_1_1.plist"
           window.location = url;
         }
     }

@@ -53,7 +53,7 @@
        <string>BYD</string>
        <!-- required. the title to display during the download. -->
        <key>title</key>
-       <string>BYD Corporate CNC App</string>
+       <string>智慧工厂CNC数据中心</string>
       </dict>
     </dict>
   </array>

@@ -4,5 +4,6 @@ APP下载资源静态部署资源，可将index.html访问链接作为android/io
 
 # 说明
 
-1. 如果IOS的ipa为企业版发布，manifest.plist需部署https地址，否则无法安装成功
-2. 如果IOS的ipa为itunes apple store应用，url修改为itunes地址即可
+1. 示例代码全部部署在qcloud cos存储桶中，访问地址：https://devdata-1252923336.cos-website.ap-guangzhou.myqcloud.com/
+2. 如果IOS的ipa为企业版发布，也可部署企业自建服务器，注意manifest.plist必须为https地址，否则无法安装成功
+3. 如果IOS的ipa为itunes apple store应用，url修改为itunes地址即可
